@@ -4,11 +4,16 @@
 
 namespace {
     std::string getConfigPath() {
-        char appData[MAX_PATH];
-        SHGetFolderPath(NULL, CSIDL_APPDATA, NULL, 0, appData);
-        std::string path = std::string(appData) + "\\WindowMerger";
-        CreateDirectoryA(path.c_str(), NULL);
-        return path + "\\config.json";
+        wchar_t appData[MAX_PATH];
+        SHGetFolderPathW(NULL, CSIDL_APPDATA, NULL, 0, appData);
+        
+        std::wstring path = std::wstring(appData) + L"\\WindowMerger";
+        CreateDirectoryW(path.c_str(), NULL);
+        
+        std::string result;
+        for (wchar_t c : path) result += (char)c;
+        result += "\\config.json";
+        return result;
     }
 }
 

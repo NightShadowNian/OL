@@ -8,38 +8,29 @@
 
 MainWindow* g_mainWindow = nullptr;
 TrayIcon* g_trayIcon = nullptr;
-
-LRESULT CALLBACK MessageHandler(int nCode, WPARAM wParam, LPARAM lParam) {
-    if (nCode == HC_ACTION) {
-        MSG* pMsg = reinterpret_cast<MSG*>(lParam);
-        ShortcutManager::ProcessMessage(*pMsg);
-    }
-    return CallNextHookEx(NULL, nCode, wParam, lParam);
-}
+AppSettings g_settings;
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     CoInitialize(NULL);
     
-    AppSettings settings = Settings::load();
-    
-    WNDCLASSW wc = {0};
-    wc.lpfnWndProc = DefWindowProc;
-    wc.hInstance = hInstance;
-    wc.lpszClassName = L"WindowMergerMain";
-    RegisterClassW(&wc);
+    g_settings = Settings::load();
     
     g_mainWindow = new MainWindow();
     g_trayIcon = new TrayIcon(g_mainWindow->GetHWND());
     
-    ShortcutManager::RegisterHotkey("toggle", settings.hotkeys["toggle"].key, []() {
+    ShortcutManager::RegisterHotkey("toggle", g_settings.hotkeys["toggle"].key, []() {
         if (g_mainWindow) g_mainWindow->Toggle();
     });
     
-    ShortcutManager::RegisterHotkey("next_tab", settings.hotkeys["next_tab"].key, []() {
-        if (g_mainWindow) g_mainWindow->SwitchToTab(0);
+    ShortcutManager::RegisterHotkey("next_tab", g_settings.hotkeys["next_tab"].key, []() {
+        if (g_mainWindow) g_mainWindow->NextTab();
     });
     
-    AutoMerge::LoadRules(settings.autoMergeRules);
+    ShortcutManager::RegisterHotkey("prev_tab", g_settings.hotkeys["prev_tab"].key, []() {
+        if (g_mainWindow) g_mainWindow->PrevTab();
+    });
+    
+    AutoMerge::LoadRules(g_settings.autoMergeRules);
     AutoMerge::SetOnMatchCallback([](HWND hwnd) {
         if (g_mainWindow) {
             g_mainWindow->AddWindow(hwnd);
@@ -47,15 +38,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     });
     AutoMerge::StartMonitoring();
     
-    HHOOK hook = SetWindowsHookEx(WH_GETMESSAGE, MessageHandler, NULL, GetCurrentThreadId());
-    
     MSG msg;
     while (GetMessage(&msg, NULL, 0, 0)) {
+        if (msg.message == WM_HOTKEY) {
+            ShortcutManager::ProcessMessage(msg);
+            continue;
+        }
+        
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
     
-    UnhookWindowsHookEx(hook);
     AutoMerge::StopMonitoring();
     ShortcutManager::UnregisterAll();
     

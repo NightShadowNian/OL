@@ -1,10 +1,30 @@
 #include "TrayIcon.h"
 
-TrayIcon::TrayIcon(HWND parent) : m_hwnd(NULL) {
-    m_hwnd = CreateWindowExW(0, L"STATIC", L"TrayIconWindow",
-        WS_POPUP, 0, 0, 0, 0, parent, NULL, NULL, NULL);
+static LRESULT CALLBACK TrayIconWndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    TrayIcon* pThis = (TrayIcon*)GetWindowLongPtr(hwnd, GWLP_USERDATA);
     
-    SetWindowLongPtr(m_hwnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
+    if (msg == WM_USER + 1) {
+        if (lParam == WM_RBUTTONUP && pThis) {
+            pThis->ShowMenu();
+            return 0;
+        }
+    }
+    return DefWindowProcW(hwnd, msg, wParam, lParam);
+}
+
+TrayIcon::TrayIcon(HWND parent) : m_hwnd(NULL) {
+    HINSTANCE hInst = GetModuleHandle(NULL);
+    
+    WNDCLASSW wc = {0};
+    wc.lpfnWndProc = TrayIconWndProc;
+    wc.hInstance = hInst;
+    wc.lpszClassName = L"WindowMergerTrayIcon";
+    RegisterClassW(&wc);
+    
+    m_hwnd = CreateWindowExW(0, L"WindowMergerTrayIcon", L"TrayIconWindow",
+        WS_POPUP, 0, 0, 0, 0, NULL, NULL, hInst, NULL);
+    
+    SetWindowLongPtr(m_hwnd, GWLP_USERDATA, (LONG_PTR)this);
     
     m_nid.cbSize = sizeof(NOTIFYICONDATAW);
     m_nid.hWnd = m_hwnd;
@@ -23,6 +43,7 @@ TrayIcon::TrayIcon(HWND parent) : m_hwnd(NULL) {
 TrayIcon::~TrayIcon() {
     Shell_NotifyIconW(NIM_DELETE, &m_nid);
     if (m_nid.hIcon) DestroyIcon(m_nid.hIcon);
+    DestroyWindow(m_hwnd);
 }
 
 void TrayIcon::Show() {
@@ -36,15 +57,6 @@ void TrayIcon::Hide() {
 void TrayIcon::SetTooltip(const std::wstring& tooltip) {
     wcscpy_s(m_nid.szTip, tooltip.c_str());
     Shell_NotifyIconW(NIM_MODIFY, &m_nid);
-}
-
-LRESULT CALLBACK TrayIcon::WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
-    TrayIcon* pThis = reinterpret_cast<TrayIcon*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
-    
-    if (msg == WM_USER + 1 && lParam == WM_RBUTTONUP) {
-        if (pThis) pThis->ShowMenu();
-    }
-    return DefWindowProcW(hwnd, msg, wParam, lParam);
 }
 
 void TrayIcon::ShowMenu() {

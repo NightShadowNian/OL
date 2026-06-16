@@ -21,6 +21,7 @@ add_executable(WindowMerger WIN32
     src/ui/MainWindow.cpp
     src/ui/TabBar.cpp
     src/ui/TrayIcon.cpp
+    src/ui/WindowListPanel.cpp
 )
 
 target_link_libraries(WindowMerger
