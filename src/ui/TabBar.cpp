@@ -1,9 +1,11 @@
 #include "TabBar.h"
 
 TabBar::TabBar(HWND parent) : m_currentIndex(-1) {
-    m_hwnd = CreateWindowEx(0, L"STATIC", L"", 
+    m_hwnd = CreateWindowExW(0, L"STATIC", L"", 
         WS_CHILD | WS_VISIBLE | SS_WHITERECT,
         0, 0, 0, 30, parent, NULL, NULL, NULL);
+    
+    SetWindowLongPtr(m_hwnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(this));
 }
 
 TabBar::~TabBar() {
@@ -87,7 +89,7 @@ LRESULT CALLBACK TabBar::WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM l
             if (pThis) pThis->DrawTabs();
             return 0;
         default:
-            return DefWindowProc(hwnd, msg, wParam, lParam);
+            return DefWindowProcW(hwnd, msg, wParam, lParam);
     }
 }
 
@@ -100,12 +102,12 @@ void TabBar::DrawTabs() {
     
     HBRUSH activeBrush = CreateSolidBrush(RGB(255, 255, 255));
     HBRUSH inactiveBrush = CreateSolidBrush(RGB(200, 200, 200));
-    HPEN borderPen = CreatePen(PS_SOLID, 1, RGB(100, 100, 100));
+    HBRUSH borderBrush = CreateSolidBrush(RGB(100, 100, 100));
     
     int x = 0;
     for (size_t i = 0; i < m_tabs.size(); i++) {
         SIZE size;
-        GetTextExtentPoint32(hdc, m_tabs[i].title.c_str(), m_tabs[i].title.length(), &size);
+        GetTextExtentPoint32W(hdc, m_tabs[i].title.c_str(), m_tabs[i].title.length(), &size);
         
         int tabWidth = size.cx + 40;
         int tabHeight = rect.bottom - rect.top;
@@ -115,25 +117,25 @@ void TabBar::DrawTabs() {
         HBRUSH brush = m_tabs[i].isActive ? activeBrush : inactiveBrush;
         FillRect(hdc, &tabRect, brush);
         
-        FrameRect(hdc, &tabRect, borderPen);
+        FrameRect(hdc, &tabRect, borderBrush);
         
         if (!m_tabs[i].isActive) {
             RECT bottomLine = {x, tabHeight - 1, x + tabWidth, tabHeight};
-            FillRect(hdc, &bottomLine, borderPen);
+            FillRect(hdc, &bottomLine, borderBrush);
         }
         
         SetTextColor(hdc, m_tabs[i].isActive ? RGB(0, 0, 0) : RGB(50, 50, 50));
         SetBkMode(hdc, TRANSPARENT);
         
         RECT textRect = {x + 10, 5, x + tabWidth - 20, tabHeight - 5};
-        DrawText(hdc, m_tabs[i].title.c_str(), m_tabs[i].title.length(), &textRect, DT_CENTER | DT_VCENTER);
+        DrawTextW(hdc, m_tabs[i].title.c_str(), m_tabs[i].title.length(), &textRect, DT_CENTER | DT_VCENTER);
         
         x += tabWidth;
     }
     
     DeleteObject(activeBrush);
     DeleteObject(inactiveBrush);
-    DeleteObject(borderPen);
+    DeleteObject(borderBrush);
     
     EndPaint(m_hwnd, &ps);
 }
@@ -142,15 +144,12 @@ void TabBar::OnMouseDown(WPARAM wParam, LPARAM lParam) {
     int x = LOWORD(lParam);
     int y = HIWORD(lParam);
     
-    RECT rect;
-    GetClientRect(m_hwnd, &rect);
-    
     HDC hdc = GetDC(m_hwnd);
     int currentX = 0;
     
     for (size_t i = 0; i < m_tabs.size(); i++) {
         SIZE size;
-        GetTextExtentPoint32(hdc, m_tabs[i].title.c_str(), m_tabs[i].title.length(), &size);
+        GetTextExtentPoint32W(hdc, m_tabs[i].title.c_str(), m_tabs[i].title.length(), &size);
         int tabWidth = size.cx + 40;
         
         if (x >= currentX && x < currentX + tabWidth) {

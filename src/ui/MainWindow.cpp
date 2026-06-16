@@ -2,16 +2,22 @@
 #include "../core/WindowManager.h"
 
 MainWindow::MainWindow() : m_contentArea(nullptr), m_activeWindow(nullptr) {
-    m_hwnd = CreateWindowEx(
+    WNDCLASSW wc = {0};
+    wc.lpfnWndProc = DefWindowProcW;
+    wc.hInstance = GetModuleHandle(NULL);
+    wc.lpszClassName = L"WindowMergerContent";
+    RegisterClassW(&wc);
+    
+    m_hwnd = CreateWindowExW(
         WS_EX_OVERLAPPEDWINDOW,
-        L"WindowMergerMain",
+        L"WindowMergerContent",
         L"WindowMerger",
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT, 800, 600,
         NULL, NULL, NULL, NULL
     );
     
-    m_contentArea = CreateWindowEx(0, L"STATIC", L"", 
+    m_contentArea = CreateWindowExW(0, L"STATIC", L"", 
         WS_CHILD | WS_VISIBLE | SS_WHITERECT,
         0, 30, 0, 0, m_hwnd, NULL, NULL, NULL);
     
@@ -38,8 +44,6 @@ void MainWindow::Toggle() {
 }
 
 void MainWindow::AddWindow(HWND hwnd) {
-    std::wstring title = WindowManager::GetWindowTitle(hwnd);
-    
     WindowManager::HideFromTaskbar(hwnd);
     WindowManager::SetParentWindow(hwnd, m_contentArea);
     
@@ -71,7 +75,7 @@ LRESULT CALLBACK MainWindow::WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPAR
             PostQuitMessage(0);
             return 0;
         default:
-            return DefWindowProc(hwnd, msg, wParam, lParam);
+            return DefWindowProcW(hwnd, msg, wParam, lParam);
     }
 }
 

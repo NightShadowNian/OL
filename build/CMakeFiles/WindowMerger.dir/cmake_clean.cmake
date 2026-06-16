@@ -15,7 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o.d"
   "CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o"
   "CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o.d"
-  "WindowMerger"
+  "WindowMerger.exe"
   "WindowMerger.pdb"
 )
 

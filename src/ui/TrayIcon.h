@@ -18,7 +18,7 @@ private:
     void ShowMenu();
     
     HWND m_hwnd;
-    NOTIFYICONDATA m_nid;
+    NOTIFYICONDATAW m_nid;
 };
 
 #endif

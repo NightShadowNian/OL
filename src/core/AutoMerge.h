@@ -1,6 +1,7 @@
 #ifndef AUTOMERGE_H
 #define AUTOMERGE_H
 
+#include <windows.h>
 #include <vector>
 #include <string>
 #include <functional>

@@ -1,6 +1,7 @@
 #ifndef SHORTCUTMANAGER_H
 #define SHORTCUTMANAGER_H
 
+#include <windows.h>
 #include <map>
 #include <string>
 #include <functional>

@@ -22,11 +22,11 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     
     AppSettings settings = Settings::load();
     
-    WNDCLASS wc = {0};
+    WNDCLASSW wc = {0};
     wc.lpfnWndProc = DefWindowProc;
     wc.hInstance = hInstance;
     wc.lpszClassName = L"WindowMergerMain";
-    RegisterClass(&wc);
+    RegisterClassW(&wc);
     
     g_mainWindow = new MainWindow();
     g_trayIcon = new TrayIcon(g_mainWindow->GetHWND());

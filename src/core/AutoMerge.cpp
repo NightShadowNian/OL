@@ -1,5 +1,6 @@
 #include "AutoMerge.h"
 #include <regex>
+#include <codecvt>
 #include "WindowManager.h"
 
 std::vector<AutoMergeRule> AutoMerge::m_rules;
@@ -20,7 +21,9 @@ bool AutoMerge::MatchRule(const std::wstring& windowTitle) {
         if (!rule.enabled) continue;
         
         try {
-            std::wregex pattern(rule.pattern);
+            std::wstring_convert<std::codecvt_utf8_utf16<wchar_t>> converter;
+            std::wstring patternW = converter.from_bytes(rule.pattern);
+            std::wregex pattern(patternW);
             if (std::regex_search(windowTitle, pattern)) {
                 return true;
             }

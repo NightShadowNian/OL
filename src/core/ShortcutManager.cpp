@@ -1,5 +1,4 @@
 #include "ShortcutManager.h"
-#include <Windows.h>
 
 std::map<std::string, int> ShortcutManager::m_hotkeyIds;
 std::map<int, std::function<void()>> ShortcutManager::m_callbacks;

@@ -73,113 +73,113 @@ CMakeFiles/WindowMerger.dir/src/main.cpp.o: CMakeFiles/WindowMerger.dir/flags.ma
 CMakeFiles/WindowMerger.dir/src/main.cpp.o: /workspace/src/main.cpp
 CMakeFiles/WindowMerger.dir/src/main.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WindowMerger.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/main.cpp.o -MF CMakeFiles/WindowMerger.dir/src/main.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/main.cpp.o -c /workspace/src/main.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/main.cpp.o -MF CMakeFiles/WindowMerger.dir/src/main.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/main.cpp.o -c /workspace/src/main.cpp
 
 CMakeFiles/WindowMerger.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/main.cpp > CMakeFiles/WindowMerger.dir/src/main.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/main.cpp > CMakeFiles/WindowMerger.dir/src/main.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/main.cpp -o CMakeFiles/WindowMerger.dir/src/main.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/main.cpp -o CMakeFiles/WindowMerger.dir/src/main.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o: /workspace/src/core/Settings.cpp
 CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o -c /workspace/src/core/Settings.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o -c /workspace/src/core/Settings.cpp
 
 CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/Settings.cpp > CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/Settings.cpp > CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/Settings.cpp -o CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/Settings.cpp -o CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o: /workspace/src/core/WindowManager.cpp
 CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o -c /workspace/src/core/WindowManager.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o -c /workspace/src/core/WindowManager.cpp
 
 CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/WindowManager.cpp > CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/WindowManager.cpp > CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/WindowManager.cpp -o CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/WindowManager.cpp -o CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o: /workspace/src/core/AutoMerge.cpp
 CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o -c /workspace/src/core/AutoMerge.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o -c /workspace/src/core/AutoMerge.cpp
 
 CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/AutoMerge.cpp > CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/AutoMerge.cpp > CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/AutoMerge.cpp -o CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/AutoMerge.cpp -o CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o: /workspace/src/core/ShortcutManager.cpp
 CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o -c /workspace/src/core/ShortcutManager.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o -MF CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o -c /workspace/src/core/ShortcutManager.cpp
 
 CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/ShortcutManager.cpp > CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/core/ShortcutManager.cpp > CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/ShortcutManager.cpp -o CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/core/ShortcutManager.cpp -o CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o: /workspace/src/ui/MainWindow.cpp
 CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o -MF CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o -c /workspace/src/ui/MainWindow.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o -MF CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o -c /workspace/src/ui/MainWindow.cpp
 
 CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/ui/MainWindow.cpp > CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/ui/MainWindow.cpp > CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/ui/MainWindow.cpp -o CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/ui/MainWindow.cpp -o CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o: /workspace/src/ui/TabBar.cpp
 CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o -MF CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o -c /workspace/src/ui/TabBar.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o -MF CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o -c /workspace/src/ui/TabBar.cpp
 
 CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/ui/TabBar.cpp > CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/ui/TabBar.cpp > CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/ui/TabBar.cpp -o CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/ui/TabBar.cpp -o CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.s
 
 CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o: CMakeFiles/WindowMerger.dir/flags.make
 CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o: /workspace/src/ui/TrayIcon.cpp
 CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o: CMakeFiles/WindowMerger.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o -MF CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o -c /workspace/src/ui/TrayIcon.cpp
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o -MF CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o.d -o CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o -c /workspace/src/ui/TrayIcon.cpp
 
 CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/ui/TrayIcon.cpp > CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.i
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/src/ui/TrayIcon.cpp > CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.i
 
 CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/ui/TrayIcon.cpp -o CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.s
+	/usr/bin/x86_64-w64-mingw32-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/src/ui/TrayIcon.cpp -o CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.s
 
 # Object files for target WindowMerger
 WindowMerger_OBJECTS = \
@@ -195,21 +195,21 @@ WindowMerger_OBJECTS = \
 # External object files for target WindowMerger
 WindowMerger_EXTERNAL_OBJECTS =
 
-WindowMerger: CMakeFiles/WindowMerger.dir/src/main.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o
-WindowMerger: CMakeFiles/WindowMerger.dir/build.make
-WindowMerger: CMakeFiles/WindowMerger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable WindowMerger"
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/main.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/core/Settings.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/core/WindowManager.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/core/AutoMerge.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/core/ShortcutManager.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/ui/MainWindow.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/ui/TabBar.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/src/ui/TrayIcon.cpp.o
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/build.make
+WindowMerger.exe: CMakeFiles/WindowMerger.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable WindowMerger.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WindowMerger.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/WindowMerger.dir/build: WindowMerger
+CMakeFiles/WindowMerger.dir/build: WindowMerger.exe
 .PHONY : CMakeFiles/WindowMerger.dir/build
 
 CMakeFiles/WindowMerger.dir/clean:
